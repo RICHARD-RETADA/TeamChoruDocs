@@ -14,8 +14,11 @@ body {
       grid-auto-rows: minmax(auto, auto);
       color: #3e3e3e;
       text-shadow: 0.4px 0.4px 0.4px rgba(0,0,0,.2);
+	  cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
 }
-
+a:hover {
+            cursor: url("https://i.imgur.com/IXULuQ1.png"), auto;
+        }
 h1 {
       font-family: "Script";
       font-weight: bold;
@@ -24,6 +27,32 @@ h1 {
       color: #F8C8C8;
 }
 
+#snowflakeContainer {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        
+        .snowflake {
+            padding-left: 15px;
+            font-size: 14px;
+            line-height: 24px;
+            position: fixed;
+            color: #ebebeb;
+            user-select: none;
+            z-index: 1000;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+        }
+        
+        .snowflake:hover {
+            cursor: default
+        }
+
+
 #wrapper {
       display: grid;
       grid-column: 3 / 11;
@@ -31,12 +60,14 @@ h1 {
       grid-auto-rows: minmax(auto, auto);
       grid-row-gap: 10px;
       margin-top: 3.6rem;
+	  cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
 }
 
 #clock-box, #info {
       grid-column: span 3;
       display: grid;
       grid-template-columns: repeat(12, 1fr);
+	  cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
 }
 
 #clock-box #clock {
@@ -47,6 +78,7 @@ h1 {
       text-align: center;
       font-size: 2.4rem;
       border-radius: 10rem;
+	  cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
 }
 
 date, time {
@@ -61,6 +93,7 @@ time {
       font-family: "Arial", sans-serif;
       line-height: 3.2rem;
       letter-spacing: 2px;
+	  cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
 }
 
 .avt {
@@ -91,6 +124,7 @@ anni {
 }
 a {
       color: #ffb6c1;
+	  cursor: url("https://i.imgur.com/IXULuQ1.png"), auto;
 }
 
 #info .one {
@@ -105,6 +139,133 @@ a {
       color: #ffb6c1;
 }
 
+
+#content-body {
+            position: relative;
+            margin-top: 0px;
+
+        }
+
+
+#link-box {
+            position: relative;
+			background-color: #FFF;
+			border-radius: 50px;
+			height: 700px;
+            width: 100%;
+			margin-top: 15px;
+			padding-top: 25px;
+			padding-left: 15px;
+			padding-right: 15px;
+        }
+
+
+.link-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: 70px auto 65px;
+            height: 70px;
+            width: 100%;
+			background-color: #F8C8C8;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            -webkit-box-shadow: 7px 7px 20px -5px rgba(0, 0, 0, .4);
+            box-shadow: 7px 7px 20px -5px rgba(0, 0, 0, .1);
+            transition: all 250ms ease-in-out;
+        }
+		.link-item p {
+            margin: 0;
+			color: #000000;
+            font-weight: 600;
+        }
+		.link-item p:hover {
+			color: #F8C8C8;
+        }
+		
+        .link-item:hover {
+			color: #F8C8C8;
+            background-color: #fafafa;
+			
+        }
+		
+        .link-content {
+            padding-top: 15px;
+			padding-left: 45px;
+        }
+        
+        .link-content p {
+            margin: 0;
+            font-weight: 600;
+        }
+        
+		.link-content p:hover {
+            margin: 0;
+			color: #F8C8C8;
+            font-weight: 600;
+        }
+		
+        .link-content span {
+            position: absolute;
+            font-weight: 400;
+            font-size: 14px;
+            bottom: 15px;
+            color: #a6a9b1;
+            max-width: 50%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            transition: all 250ms;
+            cursor: pointer;
+        }
+        
+        .link-content span:hover {
+            color: #7c7e83;
+        }
+.link-btn-chill {
+            display: inline-flex;
+            justify-content: center;
+            align-content: center;
+			padding-left: 60px;
+            position: relative;
+            margin-top: 15px;
+            font-size: 14px;
+            width: auto;
+            font-weight: 600;
+			color: #7c7e83;
+			
+        }
+        
+        .link-btn-chill::before {
+            position: absolute;
+            content: "";
+            padding-left: 7px;
+            padding-right: 7px;
+            width: 40px;
+            height: 18px;
+            background-color: currentColor;
+            opacity: .2;
+            border-radius: 5px;
+            top: -1px;
+            transition: all 250ms;
+        }
+        
+        .link-btn-chill {
+            transition: all 250ms ease-in-out;
+
+        }
+        
+		.link-btn-chill:hover {
+			color: #000000;
+        }
+		
+        .link-btn-chill:hover::before {
+            opacity: .5;
+			color: #000000;
+			background-color: #dff9fb;
+        }
+		
 footer {
       grid-column: span 3;
       text-align: center;
@@ -118,6 +279,8 @@ footer {
       grid-column: 2;
       position: relative;
       z-index: 1000;
+      opacity: .4;
+	  cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
 }
 
 #mask {
@@ -128,34 +291,41 @@ footer {
       position: fixed;
       top: 0;
       left: 0;
+	  cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
 }
 
 @media (max-width: 992px) {
       #wrapper {
             grid-column: span 12;
+			cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
       }
 
       #clock-box #clock {
             grid-column: 2 / 12;
+			cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
       }
 
       .avt {
             width: 120px;
             height: 120px;
+			cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
       }
 
       #info .one, #info .two{
             grid-column: span 12;;
+			cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
       }
 
       #heart {
             grid-column: span 12;
             padding-bottom: 1rem;
+			cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
       }
 
       footer {
             font-size: 1.2rem;
             margin: 0;
             padding-bottom: 2rem;
+			cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
       }
 }
